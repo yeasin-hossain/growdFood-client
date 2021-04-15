@@ -1,8 +1,13 @@
+import dotenv from 'dotenv';
+import RouterWrapper from './routes/RouterWrapper';
+
+dotenv.config();
 function App() {
+    console.log(process.env.REACT_APP_NAME);
     return (
-        <div className="App">
-            <h1>Hello</h1>
-        </div>
+        <>
+            <RouterWrapper />
+        </>
     );
 }
 

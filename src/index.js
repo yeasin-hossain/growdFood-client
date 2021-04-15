@@ -2,11 +2,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { GrowProvider } from './context/GrowContext';
+import './customStyle/customStyle.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <GrowProvider>
+            <App />
+        </GrowProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );
