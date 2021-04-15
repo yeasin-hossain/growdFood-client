@@ -1,9 +1,14 @@
-import React, { useContext } from 'react';
-import { GrowContext } from '../../context/GrowContext';
+import React from 'react';
+import HeroSection from '../components/Home/HeroSection';
+import OurService from '../components/Home/OurService/OurService';
 
 function Home() {
-    const { name } = useContext(GrowContext);
-    return <div>{name}</div>;
+    return (
+        <div>
+            <HeroSection />
+            <OurService />
+        </div>
+    );
 }
 
 export default Home;

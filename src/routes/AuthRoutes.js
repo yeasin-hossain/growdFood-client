@@ -1,14 +1,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import { isExpired } from 'react-jwt';
 import { Redirect, Route } from 'react-router-dom';
 
-function PublicRoute({ children, ...rest }) {
+function AuthRoutes({ children, ...rest }) {
+    const user = JSON.parse(localStorage.getItem('growUser'));
+    const isMyTokenExpired = isExpired(user?.token);
     return (
         <Route
             {...rest}
             render={({ location }) =>
                 // eslint-disable-next-line no-constant-condition
-                false ? (
+                isMyTokenExpired ? (
                     children
                 ) : (
                     <Redirect
@@ -23,4 +26,4 @@ function PublicRoute({ children, ...rest }) {
     );
 }
 
-export default PublicRoute;
+export default AuthRoutes;
