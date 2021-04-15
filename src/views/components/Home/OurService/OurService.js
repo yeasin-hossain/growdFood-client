@@ -11,13 +11,7 @@ function OurService() {
         const getItems = async () => {
             try {
                 const fetchItems = await axios.get(
-                    `${process.env.REACT_APP_API_BASE_URL}api/products/productType/${itemType}`,
-                    {
-                        headers: {
-                            Authorization:
-                                'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNzc1MTBhNmNkY2Q5MGM3Y2JkMjhiZSIsIkZ1bGxOYW1lIjoiU2hhbnRvIFJhaG1hbiIsIkVtYWlsIjoic2hhbnRveGRwQHNoYW50by5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJiYW4iOmZhbHNlLCJpYXQiOjE2MTg0MzUxNTcsImV4cCI6MTYxODUyMTU1N30.KmuGyysIe6lRULZ5Jgbj-wJq8Ku2HSuWCofhgx9WCPQ',
-                        },
-                    }
+                    `${process.env.REACT_APP_API_BASE_URL}api/public/productType/${itemType}`
                 );
                 setItems(fetchItems.data);
             } catch (err) {
