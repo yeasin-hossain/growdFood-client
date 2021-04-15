@@ -9,10 +9,10 @@ function Header() {
         localStorage.removeItem('growUser');
         setCurrentUser({});
         setLoggedIn(false);
-        history.push('/auth');
+        history.push('/');
     };
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div className="container-fluid">
                 <Link className="nav-link " to="/">
                     Home

@@ -2,13 +2,15 @@ import { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { authRoutes, privateRoutes, publicRoutes } from '.';
 import Header from '../views/components/Header/Header';
+import Footer from '../views/Footer/Footer';
+import Spinner from '../views/Spinner/Spinner';
 import AuthRoutes from './AuthRoutes';
 import PrivateRoutes from './PrivateRoutes';
 
 function RouterWrapper() {
     return (
         <Router>
-            <Suspense fallback={<div>...Loading</div>}>
+            <Suspense fallback={<Spinner />}>
                 <Header />
                 <Switch>
                     {privateRoutes.map((route, index) => (
@@ -30,6 +32,7 @@ function RouterWrapper() {
                         </AuthRoutes>
                     ))}
                 </Switch>
+                <Footer />
             </Suspense>
         </Router>
     );

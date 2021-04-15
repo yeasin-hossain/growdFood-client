@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import { toast } from 'react-toastify';
 import { GrowContext } from '../../context/GrowContext';
 import {
@@ -18,6 +18,8 @@ function Auth() {
 
     const { setCurrentUser, setLoggedIn } = useContext(GrowContext);
     const history = useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: '/' } };
     const setLocalStorage = (user) => {
         if (user.data.message) {
             toast.error(user.data.message);
@@ -28,7 +30,7 @@ function Auth() {
             localStorage.setItem('growUser', JSON.stringify(user.data));
             setLoggedIn(true);
             toast.success(`Welcome ${name} 💕 Lets Order Some Food!`);
-            history.push('/');
+            history.replace(from);
         }
     };
 
@@ -70,7 +72,7 @@ function Auth() {
         }
     };
     return (
-        <div>
+        <div style={{ height: '55vh' }}>
             {toggleForm ? (
                 <Login
                     setUserLoginData={setUserLoginData}

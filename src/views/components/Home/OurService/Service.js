@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Service({ item }) {
-    const { imageUrl, name, price, description } = item;
+    const { imageUrl, name, price, description, _id: id } = item;
     return (
         <div className="p-1 bg-warning m-3 rounded">
             <div
@@ -13,9 +14,11 @@ function Service({ item }) {
                     <h5 className="card-title">{name}</h5>
                     <h5 className="card-title">৳{price}</h5>
                     <p className="card-text">{description}</p>
-                    <button className="btn btn-warning " type="button">
-                        Order
-                    </button>
+                    <Link to={`/checkout/${id}`}>
+                        <button className="btn btn-warning " type="button">
+                            Order
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

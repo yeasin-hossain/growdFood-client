@@ -14,7 +14,7 @@ export const privateRoutes = [
         component: lazy(() => import('../views/Product/Product')),
     },
     {
-        path: '/checkout',
+        path: '/checkout/:productId',
         component: lazy(() => import('../views/Product/Checkout')),
     },
 ];
