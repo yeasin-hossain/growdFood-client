@@ -26,44 +26,39 @@ function Orders() {
     }, []);
     return (
         <div style={{ minHeight: '65vh' }}>
-            <div className="row g-0">
-                <div className="col-md-2" />
-                <div className="col-md-10">
-                    <table className="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Paid By</th>
-                                <th>Email</th>
-                                <th>Address</th>
-                                <th>Date</th>
-                                <th>Status</th>
-                                <th>ACtion</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {allOrders.map((order, index) => (
-                                <Order key={index} order={order}>
-                                    {order.status === 'pending' ? (
-                                        <button
-                                            type="button"
-                                            className="btn btn-danger"
-                                            // onClick={() => removeOrder(order._id)}
-                                        >
-                                            Remove
-                                        </button>
-                                    ) : (
-                                        <button type="button" disabled className="btn btn-danger">
-                                            Remove
-                                        </button>
-                                    )}
-                                </Order>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <table className="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Paid By</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>ACtion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {allOrders.map((order, index) => (
+                        <Order key={index} order={order}>
+                            {order.status === 'pending' ? (
+                                <button
+                                    type="button"
+                                    className="btn btn-danger"
+                                    // onClick={() => removeOrder(order._id)}
+                                >
+                                    Remove
+                                </button>
+                            ) : (
+                                <button type="button" disabled className="btn btn-danger">
+                                    Remove
+                                </button>
+                            )}
+                        </Order>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 }

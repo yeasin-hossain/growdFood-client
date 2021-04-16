@@ -91,7 +91,7 @@ function Checkout() {
                     <div className="col-md-6 py-3">
                         {showOrderInfo && (
                             <>
-                                <small>Write Address Here</small>
+                                <small>Write Address Here & Click Out Of Box</small>
                                 <input
                                     type="text"
                                     placeholder="Address Here"
