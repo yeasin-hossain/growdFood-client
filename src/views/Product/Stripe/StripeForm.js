@@ -1,9 +1,8 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
-import { GrowContext } from '../../../context/GrowContext';
 import Spinner from '../../Spinner/Spinner';
 
 const cardOptions = {
@@ -23,7 +22,6 @@ const cardOptions = {
 function StripeForm({ orderInfo }) {
     const stripe = useStripe();
     const elements = useElements();
-    const { apiToken } = useContext(GrowContext);
     const history = useHistory();
     const [orderSpinner, setOrderSpinner] = useState(null);
     const handleSubmit = async (event) => {
@@ -46,6 +44,7 @@ function StripeForm({ orderInfo }) {
         } else {
             setOrderSpinner(true);
             try {
+                const userData = JSON.parse(localStorage.getItem('growUser'));
                 const { id, type } = paymentMethod;
                 const orderInfoWithStripe = { ...orderInfo, cardId: id, cardType: type };
                 const response = await axios.post(
@@ -53,7 +52,7 @@ function StripeForm({ orderInfo }) {
                     orderInfoWithStripe,
                     {
                         headers: {
-                            Authorization: `Bearer ${apiToken}`,
+                            Authorization: `Bearer ${userData.token}`,
                         },
                     }
                 );
