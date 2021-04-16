@@ -40,8 +40,8 @@ function Header() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/checkout">
-                                Checkout
+                            <Link className="nav-link " to="/order">
+                                Orders
                             </Link>
                         </li>
 

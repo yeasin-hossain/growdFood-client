@@ -6,7 +6,6 @@ export const GrowContext = createContext();
 export const GrowProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState({});
     const [isLoggedIn, setLoggedIn] = useState(false);
-    const [allProducts, setProducts] = useState();
     const [apiToken, setApiToken] = useState('');
     useEffect(() => {
         try {
@@ -27,8 +26,6 @@ export const GrowProvider = ({ children }) => {
         setCurrentUser,
         isLoggedIn,
         setLoggedIn,
-        allProducts,
-        setProducts,
         apiToken,
         setApiToken,
     };

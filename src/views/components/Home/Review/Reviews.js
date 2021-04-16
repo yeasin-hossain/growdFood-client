@@ -11,7 +11,6 @@ const Reviews = () => {
             const getReviews = await axios.get(
                 `${process.env.REACT_APP_API_BASE_URL}api/public/getAllReviews`
             );
-            console.log(getReviews);
             setAllReviews(getReviews.data);
         };
         fetchReviews();

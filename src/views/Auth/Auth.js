@@ -25,7 +25,6 @@ function Auth() {
             toast.error(user.data.message);
         } else {
             setCurrentUser(user.data);
-            console.log(user.data);
             const { name } = user.data;
             localStorage.setItem('growUser', JSON.stringify(user.data));
             setLoggedIn(true);
@@ -72,7 +71,7 @@ function Auth() {
         }
     };
     return (
-        <div style={{ height: '55vh' }}>
+        <div className="authRoot" style={{ height: '55vh' }}>
             {toggleForm ? (
                 <Login
                     setUserLoginData={setUserLoginData}

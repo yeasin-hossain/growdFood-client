@@ -1,7 +1,10 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { useHistory } from 'react-router';
+import { toast } from 'react-toastify';
 import { GrowContext } from '../../../context/GrowContext';
+import Spinner from '../../Spinner/Spinner';
 
 const cardOptions = {
     style: {
@@ -21,10 +24,12 @@ function StripeForm({ orderInfo }) {
     const stripe = useStripe();
     const elements = useElements();
     const { apiToken } = useContext(GrowContext);
+    const history = useHistory();
+    const [orderSpinner, setOrderSpinner] = useState(null);
     const handleSubmit = async (event) => {
         // Block native form submission.
         event.preventDefault();
-
+        setOrderSpinner(true);
         if (!stripe || !elements) {
             return;
         }
@@ -37,9 +42,9 @@ function StripeForm({ orderInfo }) {
         });
 
         if (error) {
-            console.log('[error]', error);
+            toast.error(error.message);
         } else {
-            console.log('[PaymentMethod]', paymentMethod);
+            setOrderSpinner(true);
             try {
                 const { id, type } = paymentMethod;
                 const orderInfoWithStripe = { ...orderInfo, cardId: id, cardType: type };
@@ -53,9 +58,14 @@ function StripeForm({ orderInfo }) {
                     }
                 );
 
-                if (response.status === 200) {
-                    console.log(response);
+                if (response.data.message) {
+                    setOrderSpinner(false);
+                    // eslint-disable-next-line consistent-return
+                    return toast.error(response.data.message);
                 }
+                setOrderSpinner(true);
+                history.push('/');
+                toast.success('Your Order Is Success');
             } catch (err) {
                 console.log(err);
             }
@@ -70,6 +80,7 @@ function StripeForm({ orderInfo }) {
                     Pay
                 </button>
             </form>
+            {orderSpinner && <Spinner />}
         </div>
     );
 }
