@@ -16,7 +16,6 @@ function Profile() {
                         <Orders />
                     </Route>
                     <Route path="/user/review">
-                        <h1>Review</h1>
                         <Review />
                     </Route>
                 </div>

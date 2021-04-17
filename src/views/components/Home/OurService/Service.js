@@ -19,7 +19,7 @@ function Service({ item }) {
     }));
 
     return (
-        <div className="p-1 bg-warning m-3 rounded">
+        <div className="p-1 bg-warning m-3 rounded shadow">
             <div
                 className="card"
                 style={{ width: '18rem', minHeight: '400px', maxHeight: '400px' }}

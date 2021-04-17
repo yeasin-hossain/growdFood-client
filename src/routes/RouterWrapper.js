@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { authRoutes, privateRoutes, publicRoutes } from '.';
 import Header from '../views/components/Header/Header';
+import Contact from '../views/Contact/Contact';
 import Footer from '../views/Footer/Footer';
 import Spinner from '../views/Spinner/Spinner';
 import AuthRoutes from './AuthRoutes';
@@ -12,6 +13,7 @@ function RouterWrapper() {
         <Router>
             <Suspense fallback={<Spinner />}>
                 <Header />
+                <Contact />
                 <Switch>
                     {privateRoutes.map((route, index) => (
                         // eslint-disable-next-line react/no-array-index-key

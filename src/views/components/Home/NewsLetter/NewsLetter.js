@@ -7,7 +7,7 @@ function NewsLetter() {
                 For Getting Our Hot Offers, Just Put your Email Here
             </h3>
 
-            <div className="input-group mb-3 ">
+            <div className="input-group mb-3 newsLetter">
                 <input
                     type="text"
                     className="form-control"

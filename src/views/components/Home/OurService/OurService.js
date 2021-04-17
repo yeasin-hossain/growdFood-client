@@ -24,7 +24,7 @@ function OurService() {
     return (
         <div className="py-3 bg-danger">
             <h2 className="text-center py-3 text-white">Our Services</h2>
-            <div className="d-flex justify-content-center py-3">
+            <div className="d-flex justify-content-center py-3 ourService">
                 <button
                     className="btn_custom btn-5 mx-2"
                     type="button"

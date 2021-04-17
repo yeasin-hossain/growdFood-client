@@ -55,7 +55,7 @@ function AdProducts() {
         }
     };
     return (
-        <div className="w-50 p-5">
+        <div className="w-50 p-5 adminAddProduct">
             {spinner && <Spinner />}
 
             <Form onSubmit={(e) => uploadProduct(e)}>
@@ -109,6 +109,7 @@ function AdProducts() {
 
                 <Form.Group controlId="formBasicWeight">
                     <Form.Label>Image</Form.Label>
+                    <br />
                     <Form.Control
                         required
                         type="file"
@@ -116,7 +117,7 @@ function AdProducts() {
                         onChange={(e) => setProduct({ ...product, imageUrl: e.target.files[0] })}
                     />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className="my-2">
                     Upload
                 </Button>
             </Form>

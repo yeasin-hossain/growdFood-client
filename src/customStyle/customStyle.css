@@ -68,6 +68,13 @@ body {
 /*responsive*/
 
 @media (max-width: 768px) {
+	.content .title {
+		font-size: 20px !important;
+	}
+	.inner-part {
+		width: 100%;
+	}
+
 	.Header .navbar-brand {
 		display: block;
 		margin: auto;
@@ -113,6 +120,60 @@ body {
 	}
 }
 @media (max-width: 425px) {
+	.todaySpecial .content {
+		width: 100%;
+	}
+	.inner-part {
+		display: block !important;
+	}
+	.inner-part .img {
+		height: 150px !important;
+		display: block;
+		margin: 5px auto;
+	}
+	.todaySpecial {
+		height: 650px !important;
+	}
+	.todaySpecial .blog-card {
+		height: 600px !important;
+	}
+	.todaySpecial .sliders {
+		left: 80%;
+	}
+	#imgTap:checked ~ .inner-part .img {
+		width: 250px !important;
+	}
+	/* Todays Special End*/
+	.newsLetter {
+		display: flex;
+		flex-direction: column;
+	}
+	.newsLetter > input {
+		width: 80% !important;
+		margin-bottom: 15px !important;
+		display: block;
+		margin: auto;
+	}
+	.newsLetter > button {
+		display: block !important;
+		margin: auto !important;
+	}
+	/* News Letter Done */
+	aside {
+		min-height: 0 !important;
+		border-bottom-right-radius: 0 !important;
+	}
+	.userReview,
+	.adminAddProduct {
+		width: 100% !important;
+	}
+	.ourService {
+		flex-direction: column;
+		align-items: center;
+	}
+	.btn_custom {
+		margin: 5px;
+	}
 	.sticky-top {
 		position: relative;
 	}
