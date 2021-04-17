@@ -29,17 +29,24 @@ function Service({ item }) {
                     onMouseLeave={() => set({ xys: [0, 0, 1] })}
                     style={{ transform: props.xys.interpolate(trans) }}
                 >
-                    <img src={imageUrl} className="card-img-top rounded" alt="..." />
+                    <img
+                        src={imageUrl}
+                        className="card-img-top rounded"
+                        style={{ height: '150px' }}
+                        alt="..."
+                    />
                 </animated.div>
 
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    <h5 className="card-title">৳{price}</h5>
+                    <h5 className="card-title">
+                        ৳{price} <small>Per Person</small>
+                    </h5>
                     <p className="card-text">{description}</p>
                     {stock ? (
                         <Link to={`/checkout/${id}`}>
                             <button className="btn btn-warning shadow" type="button">
-                                Order
+                                Order Now
                             </button>
                         </Link>
                     ) : (

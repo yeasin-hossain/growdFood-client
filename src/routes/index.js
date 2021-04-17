@@ -1,6 +1,24 @@
 import { lazy } from 'react';
 
 export const privateRoutes = [
+    // Admin Routes
+    {
+        path: '/admin/orders',
+        component: lazy(() => import('../views/Admin/Admin')),
+    },
+    {
+        path: '/admin/users',
+        component: lazy(() => import('../views/Admin/Admin')),
+    },
+    {
+        path: '/admin/products',
+        component: lazy(() => import('../views/Admin/Admin')),
+    },
+    {
+        path: '/admin/allProducts',
+        component: lazy(() => import('../views/Admin/Admin')),
+    },
+    // Users Routes
     {
         path: '/user',
         component: lazy(() => import('../views/User/Profile/Profile')),

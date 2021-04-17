@@ -8,10 +8,10 @@ function Profile() {
     return (
         <div>
             <div className="row g-0">
-                <div className="col-md-2">
+                <div className="col-md-4 col-lg-2 ">
                     <SideBar />
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-8 col-lg-10">
                     <Route path="/user/order">
                         <Orders />
                     </Route>

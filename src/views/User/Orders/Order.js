@@ -3,6 +3,7 @@ import React from 'react';
 function Order({ order, children }) {
     const { cardType, userEmail, address, createdAt, status } = order;
     const { name, price } = order.productInfo;
+    const date = new Date(createdAt).toISOString().slice(0, 10);
     return (
         <tr>
             <td className="align-middle" data-label="Name">
@@ -21,7 +22,7 @@ function Order({ order, children }) {
                 {address}
             </td>
             <td className="align-middle" data-label="Order Date">
-                {createdAt}
+                {date}
             </td>
             <td className="align-middle" data-label="Status">
                 {status}

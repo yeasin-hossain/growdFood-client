@@ -37,11 +37,11 @@ function TodaySpecial() {
                             <img src={discountImg} alt="" />
                         </label>
                         <div className="content content-2">
-                            <span>রমজান মোবারক</span>
-                            <div className="title">রমজান উপলক্ষে আমাদের বিশেষ ছাড়!</div>
+                            <span>সাবধান করোনা !</span>
+                            <div className="title">ঘরে থাকুন,নিজে বাচুন অন্যকে বাচান।</div>
                             <div className="text">
-                                অর্ডার করতে এখন রেজিষ্টার করে, ঝাপিয়ে পড়ুন আপনার পছন্দের খাবাররে
-                                সাথে
+                                যেকোন পারিবারিক অনুষ্ঠানের জন্য আমাদের অর্ডার করতে, এখনই রেজিষ্টার
+                                করুন।
                             </div>
                             <button type="button">Read more</button>
                         </div>
@@ -51,11 +51,11 @@ function TodaySpecial() {
                             <img src={discountImg} alt="" />
                         </label>
                         <div className="content content-3">
-                            <span>রমজান মোবারক</span>
-                            <div className="title">রমজান উপলক্ষে আমাদের বিশেষ ছাড়!</div>
+                            <span>লকডাউনে ইফতারি !!!</span>
+                            <div className="title">ঘরে বসে পুরান ঢাকার ঐতিহ্যবাহী ইফতারি</div>
                             <div className="text">
-                                অর্ডার করতে এখন রেজিষ্টার করে, ঝাপিয়ে পড়ুন আপনার পছন্দের খাবাররে
-                                সাথে
+                                আমাদের অভিজ্ঞ বাবুর্চি দ্বারা, আপনার পছন্দের ইফতারি তৈরি করে পৌছে
+                                দিচ্ছি আপনার ঘরে।
                             </div>
                             <button type="button">Read more</button>
                         </div>

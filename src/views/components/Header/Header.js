@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { GrowContext } from '../../../context/GrowContext';
+import dashboardIcon from '../../../Images/dashboard.svg';
 import logoutIcon from '../../../Images/exit.svg';
 import HomeIcon from '../../../Images/home.svg';
 import loginIcon from '../../../Images/join.svg';
@@ -8,7 +9,7 @@ import Logo from '../../../Images/order-food.svg';
 import ProfileIcon from '../../../Images/profile.svg';
 
 function Header() {
-    const { isLoggedIn, setCurrentUser, setLoggedIn } = useContext(GrowContext);
+    const { isLoggedIn, setCurrentUser, setLoggedIn, currentUser } = useContext(GrowContext);
     const history = useHistory();
     const logoutBtn = () => {
         localStorage.removeItem('growUser');
@@ -16,6 +17,7 @@ function Header() {
         setLoggedIn(false);
         history.push('/');
     };
+    const { role } = currentUser;
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top px-5">
             <div className="container-fluid">
@@ -62,20 +64,37 @@ function Header() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link
-                                className="nav-link mx-3"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="bottom"
-                                title="Profile"
-                                to="/user/order"
-                            >
-                                <img
-                                    src={ProfileIcon}
-                                    alt=""
-                                    className="img-fluid"
-                                    style={{ width: '30px' }}
-                                />
-                            </Link>
+                            {role === 'admin' ? (
+                                <Link
+                                    className="nav-link mx-3"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom"
+                                    title="Profile"
+                                    to="/admin/orders"
+                                >
+                                    <img
+                                        src={dashboardIcon}
+                                        alt=""
+                                        className="img-fluid"
+                                        style={{ width: '30px' }}
+                                    />
+                                </Link>
+                            ) : (
+                                <Link
+                                    className="nav-link mx-3"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom"
+                                    title="DashBoard"
+                                    to="/user/order"
+                                >
+                                    <img
+                                        src={ProfileIcon}
+                                        alt=""
+                                        className="img-fluid"
+                                        style={{ width: '30px' }}
+                                    />
+                                </Link>
+                            )}
                         </li>
 
                         <li className="nav-item">

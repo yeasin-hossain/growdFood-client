@@ -69,7 +69,7 @@ function Checkout() {
                         <h3>{name}</h3>
                         <h5>৳{price}</h5>
                         <h3>For:- {type}</h3>
-                        <h3> {description}</h3>
+                        <p> {description}</p>
                         {!showOrderInfo ? (
                             <button
                                 type="button"
@@ -98,6 +98,15 @@ function Checkout() {
                                     className="form-control mt-3"
                                     required
                                     onBlur={(e) => addressHandler(e.target.value)}
+                                />
+                                <input
+                                    type="date"
+                                    placeholder="Address Here"
+                                    className="form-control mt-3"
+                                    required
+                                    onChange={(e) =>
+                                        setProduct({ ...product, createdAt: e.target.value })
+                                    }
                                 />
                                 {enablePay && (
                                     <Elements stripe={stripePromise}>
