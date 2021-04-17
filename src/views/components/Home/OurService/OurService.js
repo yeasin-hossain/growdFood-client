@@ -1,6 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Service from './Service';
 
 function OurService() {
@@ -51,6 +52,15 @@ function OurService() {
                     onClick={() => setItemType('breakfast')}
                 >
                     Breakfast
+                </button>
+                <button
+                    className="btn_custom btn-5 mx-2"
+                    type="button"
+                    onClick={() => setItemType('breakfast')}
+                >
+                    <Link to="/products" className="btn">
+                        All Product
+                    </Link>
                 </button>
             </div>
             <div className="services d-flex justify-content-center my-3 flex-wrap">

@@ -3,9 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { animated, useSpring } from 'react-spring';
 
-function Service({ item }) {
-    const { imageUrl, name, price, description, _id: id, stock, type } = item;
-
+function Service({ product }) {
+    const { imageUrl, name, price, description, _id: id, stock } = product;
+    console.log(product);
     const calc = (x, y) => [
         -(y - window.innerHeight / 2) / 20,
         (x - window.innerWidth / 2) / 20,
@@ -38,9 +38,7 @@ function Service({ item }) {
                 </animated.div>
 
                 <div className="card-body">
-                    <h5 className="card-title">
-                        {name} <small>({type})</small>
-                    </h5>
+                    <h5 className="card-title">{name}</h5>
                     <h5 className="card-title">
                         ৳{price} <small>Per Person</small>
                     </h5>

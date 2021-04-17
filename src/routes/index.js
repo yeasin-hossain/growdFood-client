@@ -32,8 +32,8 @@ export const privateRoutes = [
         component: lazy(() => import('../views/User/Profile/Profile')),
     },
     {
-        path: '/product/:productId',
-        component: lazy(() => import('../views/Product/Product')),
+        path: '/products',
+        component: lazy(() => import('../views/Product/AllProducts/Products')),
     },
     {
         path: '/checkout/:productId',
