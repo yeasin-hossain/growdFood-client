@@ -7,14 +7,14 @@ function SideBar() {
         <aside>
             <p> All YOur Needs </p>
             <Link to="/admin/orders">
-                <strong> All Orders</strong>
+                <strong> Manage Orders</strong>
             </Link>
 
             <Link to="/admin/users">
-                <strong> All Users </strong>
+                <strong> Manage Users </strong>
             </Link>
             <Link to="/admin/allProducts">
-                <strong> ALL Products </strong>
+                <strong> Manage Products </strong>
             </Link>
             <Link to="/admin/products">
                 <strong> Add Products </strong>

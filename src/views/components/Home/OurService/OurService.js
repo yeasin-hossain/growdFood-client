@@ -59,7 +59,7 @@ function OurService() {
                     onClick={() => setItemType('breakfast')}
                 >
                     <Link to="/products" className="btn">
-                        All Product
+                        All Services
                     </Link>
                 </button>
             </div>
