@@ -51,7 +51,7 @@ function Header() {
                             />
                         </Link>
                     </Nav.Link>
-                    <Nav.Link href="#link">
+                    <Nav.Link>
                         {role === 'admin' ? (
                             <Link
                                 className="nav-link mx-3"
@@ -84,7 +84,7 @@ function Header() {
                             </Link>
                         )}
                     </Nav.Link>
-                    <Nav.Link href="#link">
+                    <Nav.Link>
                         {isLoggedIn ? (
                             <button
                                 className="btn"
@@ -118,7 +118,7 @@ function Header() {
                             </Link>
                         )}
                     </Nav.Link>
-                    {name && <p className="text-danger">{name}❤</p>}
+                    {name && <p className="text-danger m-3">{name}❤</p>}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

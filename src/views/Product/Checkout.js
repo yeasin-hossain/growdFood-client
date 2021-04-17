@@ -36,11 +36,11 @@ function Checkout() {
         };
         getProduct();
     }, [productId]);
-    const { id, Email } = currentUser;
+    const { id, userEmail } = currentUser;
     const { name, imageUrl, price, type, description, quantity } = product;
     const orderInfo = {
         userId: id,
-        userEmail: Email,
+        userEmail,
         address,
         quantity,
         productInfo: {
@@ -50,6 +50,7 @@ function Checkout() {
             type,
         },
     };
+
     const addressHandler = (userAddress) => {
         if (userAddress.length > 5) {
             addAddress(userAddress);

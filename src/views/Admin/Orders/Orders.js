@@ -4,11 +4,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { toast } from 'react-toastify';
+import Spinner from '../../Spinner/Spinner';
 import Order from '../../User/Orders/Order';
 
 function Orders() {
     const [allOrders, setAllOrders] = useState([]);
     const userData = JSON.parse(localStorage.getItem('growUser'));
+    const [spinner, setSpinner] = useState(true);
     useEffect(() => {
         const getUserOrder = async () => {
             try {
@@ -21,6 +23,7 @@ function Orders() {
                     }
                 );
                 setAllOrders(fetchAllOrders.data);
+                setSpinner(false);
             } catch (err) {
                 console.log(err);
             }
@@ -54,6 +57,8 @@ function Orders() {
     };
     return (
         <div style={{ minHeight: '65vh' }}>
+            {spinner && <Spinner />}
+
             <table className="table table-striped">
                 <thead>
                     <tr>

@@ -3,11 +3,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import Spinner from '../../Spinner/Spinner';
 import Product from './Product';
 
 function AllProducts() {
     const [allProducts, setAllProducts] = useState([]);
     const userData = JSON.parse(localStorage.getItem('growUser'));
+    const [spinner, setSpinner] = useState(true);
     useEffect(() => {
         const getAllProducts = async () => {
             try {
@@ -20,6 +22,7 @@ function AllProducts() {
                     }
                 );
                 setAllProducts(fetchAllOrders.data);
+                setSpinner(false);
             } catch (err) {
                 console.log(err);
             }
@@ -67,6 +70,7 @@ function AllProducts() {
     };
     return (
         <div>
+            {spinner && <Spinner />}
             <table className="table table-striped">
                 <thead>
                     <tr>

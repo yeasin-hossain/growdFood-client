@@ -4,11 +4,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import Spinner from '../../Spinner/Spinner';
 import User from './User';
 
 function Users() {
     const [allUsers, setAllUsers] = useState([]);
     const userData = JSON.parse(localStorage.getItem('growUser'));
+    const [spinner, setSpinner] = useState(true);
     useEffect(() => {
         const getUserOrder = async () => {
             try {
@@ -21,6 +23,7 @@ function Users() {
                     }
                 );
                 setAllUsers(fetchAllOrders.data);
+                setSpinner(false);
             } catch (err) {
                 console.log(err);
             }
@@ -57,6 +60,7 @@ function Users() {
     };
     return (
         <div style={{ minHeight: '65vh' }}>
+            {spinner && <Spinner />}
             <table className="table table-striped">
                 <thead>
                     <tr>

@@ -1,11 +1,13 @@
 /* eslint-disable react/no-array-index-key */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Spinner from '../../Spinner/Spinner';
 import Contact from './Contact';
 
 function Contacts() {
     const [allContacts, setAllContacts] = useState([]);
     const userData = JSON.parse(localStorage.getItem('growUser'));
+    const [spinner, setSpinner] = useState(true);
     useEffect(() => {
         const getUserOrder = async () => {
             try {
@@ -13,6 +15,7 @@ function Contacts() {
                     `${process.env.REACT_APP_API_BASE_URL}api/public/getContact`
                 );
                 setAllContacts(fetchAllContacts.data);
+                setSpinner(false);
             } catch (err) {
                 console.log(err);
             }
@@ -21,6 +24,7 @@ function Contacts() {
     }, [userData.token]);
     return (
         <div>
+            {spinner && <Spinner />}
             <table className="table table-striped">
                 <thead>
                     <tr>

@@ -1,10 +1,12 @@
 /* eslint-disable react/no-array-index-key */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Spinner from '../../Spinner/Spinner';
 import Order from './Order';
 
 function Orders() {
     const [allOrders, setAllOrders] = useState([]);
+    const [spinner, setSpinner] = useState(true);
     useEffect(() => {
         const getUserOrder = async () => {
             try {
@@ -18,6 +20,7 @@ function Orders() {
                     }
                 );
                 setAllOrders(fetchAllOrders.data);
+                setSpinner(false);
             } catch (err) {
                 console.log(err);
             }
@@ -26,6 +29,7 @@ function Orders() {
     }, []);
     return (
         <div style={{ minHeight: '65vh' }}>
+            {spinner && <Spinner />}
             <table className="table table-striped">
                 <thead>
                     <tr>
