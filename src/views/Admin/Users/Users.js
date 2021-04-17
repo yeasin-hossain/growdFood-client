@@ -3,6 +3,7 @@
 /* eslint-disable react/no-array-index-key */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import User from './User';
 
 function Users() {
@@ -48,6 +49,7 @@ function Users() {
                 }
                 return user;
             });
+            toast.success('User updated successfully');
             setAllUsers(filterUpdateUser);
         } catch (err) {
             console.log(err);

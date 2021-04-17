@@ -12,13 +12,13 @@ function User({ user, updateStatus }) {
             <td className="align-middle" data-label="Price">
                 {email}
             </td>
-            <td className="align-middle" data-label="Paid By">
+            <td className="align-middle" data-label="Role">
                 {role}
             </td>
-            <td className="align-middle" data-label="Paid By">
+            <td className="align-middle" data-label="Ban">
                 {ban ? 'True' : 'False'}
             </td>
-            <td className="align-middle" data-label="Paid By">
+            <td className="align-middle" data-label="Action">
                 <DropdownButton id="dropdown-basic-button" title="User Role Or Ban">
                     {role === 'admin' ? (
                         <Dropdown.Item>

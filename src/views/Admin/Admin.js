@@ -1,5 +1,7 @@
 import React from 'react';
 import AdminRoutes from '../../routes/AdminRoutes';
+import Contacts from './Contacts/Contacts';
+import NewsLetters from './NewsLetter/NewsLetters';
 import Orders from './Orders/Orders';
 import AdProducts from './Products/AdProducts';
 import AllProducts from './Products/AllProducts';
@@ -26,6 +28,12 @@ function Admin() {
                     </AdminRoutes>
                     <AdminRoutes path="/admin/allProducts">
                         <AllProducts />
+                    </AdminRoutes>
+                    <AdminRoutes path="/admin/contact">
+                        <Contacts />
+                    </AdminRoutes>
+                    <AdminRoutes path="/admin/nLetter">
+                        <NewsLetters />
                     </AdminRoutes>
                 </div>
             </div>

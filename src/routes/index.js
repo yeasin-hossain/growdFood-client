@@ -18,6 +18,14 @@ export const privateRoutes = [
         path: '/admin/allProducts',
         component: lazy(() => import('../views/Admin/Admin')),
     },
+    {
+        path: '/admin/contact',
+        component: lazy(() => import('../views/Admin/Admin')),
+    },
+    {
+        path: '/admin/nLetter',
+        component: lazy(() => import('../views/Admin/Admin')),
+    },
     // Users Routes
     {
         path: '/user',

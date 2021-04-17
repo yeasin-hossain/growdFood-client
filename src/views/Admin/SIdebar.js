@@ -13,11 +13,17 @@ function SideBar() {
             <Link to="/admin/users">
                 <strong> All Users </strong>
             </Link>
+            <Link to="/admin/allProducts">
+                <strong> ALL Products </strong>
+            </Link>
             <Link to="/admin/products">
                 <strong> Add Products </strong>
             </Link>
-            <Link to="/admin/allProducts">
-                <strong> ALL Products </strong>
+            <Link to="/admin/contact">
+                <strong> Contact Request </strong>
+            </Link>
+            <Link to="/admin/nLetter">
+                <strong> NewsLetter </strong>
             </Link>
         </aside>
     );
