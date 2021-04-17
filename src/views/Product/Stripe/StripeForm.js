@@ -40,6 +40,7 @@ function StripeForm({ orderInfo }) {
         });
 
         if (error) {
+            setOrderSpinner(false);
             toast.error(error.message);
         } else {
             setOrderSpinner(true);

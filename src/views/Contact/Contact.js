@@ -26,6 +26,7 @@ function Contact() {
         position: 'fixed',
         top: '50%',
         right: '3%',
+        zIndex: '999999999',
     };
     return (
         <div style={contactStyles}>

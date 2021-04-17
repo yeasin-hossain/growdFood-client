@@ -37,11 +37,12 @@ function Checkout() {
         getProduct();
     }, [productId]);
     const { id, Email } = currentUser;
-    const { name, imageUrl, price, type, description } = product;
+    const { name, imageUrl, price, type, description, quantity } = product;
     const orderInfo = {
         userId: id,
         userEmail: Email,
         address,
+        quantity,
         productInfo: {
             id,
             name,
@@ -95,10 +96,21 @@ function Checkout() {
                                 <input
                                     type="text"
                                     placeholder="Address Here"
-                                    className="form-control mt-3"
+                                    className="form-control my-3"
                                     required
                                     onBlur={(e) => addressHandler(e.target.value)}
                                 />
+                                <small>Quantity </small>
+                                <input
+                                    type="text"
+                                    placeholder="Quantity minimum 10 Person"
+                                    className="form-control my-3"
+                                    required
+                                    onChange={(e) =>
+                                        setProduct({ ...product, quantity: e.target.value })
+                                    }
+                                />
+                                <small>Service Date </small>
                                 <input
                                     type="date"
                                     placeholder="Address Here"
