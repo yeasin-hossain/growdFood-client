@@ -2,7 +2,7 @@ import React from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 
 function Product({ product, updateStatus }) {
-    const { name, price, imageUrl, stock, _id: id } = product;
+    const { name, price, imageUrl, stock, _id: id, type } = product;
     return (
         <tr>
             <td className="align-middle" data-label="Image">
@@ -18,6 +18,9 @@ function Product({ product, updateStatus }) {
             </td>
             <td className="align-middle" data-label="Price">
                 ৳{price}
+            </td>
+            <td className="align-middle" data-label="Price">
+                {type}
             </td>
             <td className="align-middle" data-label="Stock">
                 {stock ? 'True' : 'False'}

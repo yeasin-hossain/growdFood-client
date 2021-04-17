@@ -73,6 +73,7 @@ function AllProducts() {
                         <th>Image</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Type</th>
                         <th>Stock</th>
                         <th>ACtion</th>
                     </tr>
