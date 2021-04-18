@@ -10,6 +10,45 @@
 
 ## Our Features
 
-> User
+> User Features
 
-> Admin
+- Visit Home Page
+- Create New Account
+- Old User login
+  - Secure And safe
+- Visit All Service (Without Login)
+- Buy Service With Delivered Date And Quantity(Person)
+- Profile Dashboard
+  - Visit Ordered Services Status
+  - Write Review
+- Contact To Admin With Email And Message
+- NewsLetter Subscribe
+
+  > Admin Features
+
+- Control Panel/Dashboard Access
+  *Manage orders
+  *Change Order status
+  *Confirm
+  *Processing
+  *Cancel
+  *Delivered
+  *Manage users
+  *Changer User role
+
+  _ Make Admin
+  _ Admin To Customer
+
+  - Add Products
+    - Product Name
+    - Price
+    - Type
+    - Description
+    - Image
+  - Manage Products
+    - Delete Product
+    - Stock Toggle
+  - Contact Request
+    - Contact Request Information
+  - NewsLetter
+    - NewsLetter Information
