@@ -38,7 +38,7 @@ function Orders() {
                         <th>Paid By</th>
                         <th>Email</th>
                         <th>Address</th>
-                        <th>Date</th>
+                        <th>Delivery Date</th>
                         <th>Quantity</th>
                         <th>Status</th>
                         <th>ACtion</th>
