@@ -10,13 +10,12 @@
 
 ## Our Features
 
-**After One Day You Will Automatic Logout**
-**Ban User Account**
-**Informative Notification**
-**Secure By**
-
-- JWT
-- Bcrypt
+- **After One Day You Will Automatic Logout**
+- **Ban User Account**
+- **Informative Notification**
+- **Secure By**
+  - JWT
+  - Bcrypt
 
 > User Features
 
