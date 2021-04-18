@@ -43,10 +43,11 @@
         - Delivered
 
 - Manage users
-  -Changer User role
 
-  - Make Admin
-  - Admin To Customer
+  - Changer User role
+
+    - Make Admin
+    - Admin To Customer
 
   - Add Products
     - Product Name
