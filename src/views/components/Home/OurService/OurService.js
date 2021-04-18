@@ -2,12 +2,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from '../../../Spinner/Spinner';
 import Service from './Service';
 
 function OurService() {
     const [items, setItems] = useState([]);
     const [itemType, setItemType] = useState('ifter');
-
+    const [spinner, setSpinner] = useState(true);
     useEffect(() => {
         const getItems = async () => {
             try {
@@ -15,6 +16,7 @@ function OurService() {
                     `${process.env.REACT_APP_API_BASE_URL}api/public/productType/${itemType}`
                 );
                 setItems(fetchItems.data);
+                setSpinner(false);
             } catch (err) {
                 console.log(err);
             }
@@ -63,6 +65,7 @@ function OurService() {
                     </Link>
                 </button>
             </div>
+            {spinner && <Spinner />}
             <div className="services d-flex justify-content-center my-3 flex-wrap">
                 {items.map((item, index) => (
                     <Service key={index} item={item} />
