@@ -56,7 +56,7 @@ function SignUp({ registerData, setRegisterData, signUp }) {
                             <use xlinkHref="#icon-lock" />
                         </svg>
                         <span className="text-warning">
-                            Min 8 With Special Char Also Capital And LowerCase
+                            Min 8 With Special Char Also UpperCase, LowerCase And Number
                         </span>
 
                         <input
