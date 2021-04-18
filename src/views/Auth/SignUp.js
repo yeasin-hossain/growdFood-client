@@ -55,13 +55,15 @@ function SignUp({ registerData, setRegisterData, signUp }) {
                         <svg className="icon">
                             <use xlinkHref="#icon-lock" />
                         </svg>
-                        <span className="hidden">Password</span>
+                        <span className="text-warning">
+                            Min 8 With Special Char Also Capital And LowerCase
+                        </span>
 
                         <input
                             id="login__password"
                             type="password"
                             name="password"
-                            className="form__input"
+                            className="form__input mt-3"
                             placeholder="Password"
                             required
                             onChange={(e) =>
