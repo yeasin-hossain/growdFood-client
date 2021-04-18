@@ -41,8 +41,8 @@
         - Processing
         - Cancel
         - Delivered
-        - Manage users
 
+- Manage users
   -Changer User role
 
   - Make Admin
