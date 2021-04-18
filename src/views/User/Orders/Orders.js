@@ -48,10 +48,12 @@ function Orders() {
                     {allOrders.map((order, index) => (
                         <Order key={index} order={order}>
                             {order.status === 'pending' ? (
+                                // For Requirements User Can't Delete Order
                                 <button
                                     type="button"
                                     className="btn btn-danger"
                                     // onClick={() => removeOrder(order._id)}
+                                    disabled
                                 >
                                     Remove
                                 </button>

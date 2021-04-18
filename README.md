@@ -10,6 +10,14 @@
 
 ## Our Features
 
+**After One Day You Will Automatic Logout**
+**Ban User Account**
+**Informative Notification**
+**Secure By**
+
+- JWT
+- Bcrypt
+
 > User Features
 
 - Visit Home Page
@@ -27,17 +35,19 @@
   > Admin Features
 
 - Control Panel/Dashboard Access
-  *Manage orders
-  *Change Order status
-  *Confirm
-  *Processing
-  *Cancel
-  *Delivered
-  *Manage users
-  *Changer User role
 
-  _ Make Admin
-  _ Admin To Customer
+      -Manage orders
+        - Change Order status
+        - Confirm
+        - Processing
+        - Cancel
+        - Delivered
+        - Manage users
+
+  -Changer User role
+
+  - Make Admin
+  - Admin To Customer
 
   - Add Products
     - Product Name
@@ -52,3 +62,14 @@
     - Contact Request Information
   - NewsLetter
     - NewsLetter Information
+
+> Home Page
+
+- Nav With Banner
+- Feature Service
+- Trading Information
+- Our Client Feedback
+- Newsletter
+- Footer
+
+**Thanks**
