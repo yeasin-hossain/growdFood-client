@@ -35,7 +35,7 @@
 
 - Control Panel/Dashboard Access
 
-      -Manage orders
+      - Manage orders
         - Change Order status
         - Confirm
         - Processing
