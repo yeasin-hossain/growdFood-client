@@ -5,7 +5,7 @@ import { animated, useSpring } from 'react-spring';
 
 function Service({ product }) {
     const { imageUrl, name, price, description, _id: id, stock } = product;
-    console.log(product);
+
     const calc = (x, y) => [
         -(y - window.innerHeight / 2) / 20,
         (x - window.innerWidth / 2) / 20,

@@ -21,7 +21,6 @@ function Review() {
                 userEmail: currentUser.Email,
                 review,
             };
-            console.log(reviewInfo);
             const userData = JSON.parse(localStorage.getItem('growUser'));
             const saveReview = axios.post(
                 `${process.env.REACT_APP_API_BASE_URL}api/reviews/saveReview`,

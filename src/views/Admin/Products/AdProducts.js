@@ -14,7 +14,6 @@ function AdProducts() {
         const userData = JSON.parse(localStorage.getItem('growUser'));
         try {
             const image = new FormData();
-            console.log(product);
             setSpinner(true);
             image.set('key', '14966dcb668bd4afd338e132de02b3c7');
             image.append('image', product.imageUrl);
@@ -26,7 +25,6 @@ function AdProducts() {
             }
             const imageUrl = (product.imageUrl = uploadImage.data.data.display_url);
             setProduct({ ...product, imageUrl });
-            console.log(product);
             const productValidation = await productValidationSchema.isValid(product, {
                 abortEarly: false,
             });

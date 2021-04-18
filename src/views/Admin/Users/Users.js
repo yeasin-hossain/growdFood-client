@@ -46,7 +46,6 @@ function Users() {
                     if (statusData.type === 'role') {
                         user.role = updatedOrder.data.role;
                     } else {
-                        console.log(updatedOrder.data.ban);
                         user.ban = updatedOrder.data.ban;
                     }
                 }
