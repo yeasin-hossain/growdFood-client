@@ -44,7 +44,7 @@ function Service({ item }) {
                     <h5 className="card-title">
                         ৳{price} <small>Per Person</small>
                     </h5>
-                    <p className="card-text">{description}</p>
+                    <p className="card-text">{description.substring(0, 120)}...</p>
                     {stock ? (
                         <Link to={`/checkout/${id}`}>
                             <button className="btn btn-warning shadow" type="button">
