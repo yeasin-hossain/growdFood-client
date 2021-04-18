@@ -70,5 +70,6 @@
 - Our Client Feedback
 - Newsletter
 - Footer
+- Floating Contact Box
 
-**Thanks**
+                                  **Thanks**
